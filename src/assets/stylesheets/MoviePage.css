@@ -1,0 +1,29 @@
+/* styles.css or MoviePage.css */
+    img{
+        width: 30%;
+        border-radius: 5%;
+    }
+  
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: rgba(249, 211, 180, 1);
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: rgba(249, 211, 180, 1);
+    font-weight: bold;
+  }
+  
+  span{
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
