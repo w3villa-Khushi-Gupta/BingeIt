@@ -4,10 +4,21 @@ import Temp from './Temp';
 
 function ProtectedRoute() {
     const token = localStorage.getItem('token');
-    console.log(token)
+    // console.log(token)
     // const navigate =useNavigate()
 
-    return token ? (<Outlet />) : (<Navigate to= '/temp' replace />)
+
+    // let islogin = false;
+     if (token)
+     {
+       return <Outlet />
+     }
+     else
+     {
+      return <Navigate to='/'></Navigate>
+     }
+
+    // return token ? (<Outlet />) : (<Navigate to= '/temp' replace />)
     // if (!token) {
     //     return 
     // } else {

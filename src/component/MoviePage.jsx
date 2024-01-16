@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Header from './Header';
 import '../assets/stylesheets/MoviePage.css'
 
-function MoviePage() {
+function MoviePage(props) {
     const [movie, setMovie] = useState(null);
     const { imdbID } = useParams();
 
@@ -24,8 +24,11 @@ function MoviePage() {
 
     return (
         <>
+
             <div className='container'>
                 <div className="movie-page">
+                <Header searchMovies={props.searchMovies} />
+
                     <img src={movie.Poster} alt={movie.Title} />
                     <h1>{movie.Title}</h1>
                     <p>Year: <span>{movie.Year}</span></p>
