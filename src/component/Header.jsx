@@ -14,8 +14,7 @@ function Header({ searchMovies }) {
     };
     const user = localStorage.getItem('email');
     const handleLogout = () => {
-        // Clear the user's authentication token from local storage
-        localStorage.removeItem('token');
+        localStorage.clear();
         // Redirect the user to the login page
         navigate('/');
     };
