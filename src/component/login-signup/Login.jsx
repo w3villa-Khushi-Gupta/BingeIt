@@ -35,9 +35,12 @@ function Login() {
             }
         }
     };
+    const handleSignUpClick = () => {
+        navigate('/register');
+      };
 
 
-    // THERE IS NO OPTION OF RETRIEVING THE USER USING TOKEN IN REQRES
+    // THERE IS NO OPTION FOR RETRIEVING THE USER USING TOKEN IN REQRES
 
 
 // const token = localStorage.getItem('token')
@@ -66,7 +69,7 @@ function Login() {
 
             <div className="login-container">
                 <form className="login-form" onSubmit={handleSubmit}>
-                    <h1>Login</h1>
+                    <h3>Login</h3>
                     <div>
                         <label htmlFor="email">Email:</label>
                         <input
@@ -77,7 +80,6 @@ function Login() {
                             required
                         />
                     </div>
-
                     <div>
                         <label htmlFor="password">Password:</label>
                         <input
@@ -88,9 +90,11 @@ function Login() {
                             required
                         />
                     </div>
-
                     <button type="submit">Login</button>
                 </form>
+            </div>
+            <div className='sign-up-message' onClick={handleSignUpClick}>
+                Didn't have an account?  <span className="hover-anchor">SignUp</span>
             </div>
         </>
     );

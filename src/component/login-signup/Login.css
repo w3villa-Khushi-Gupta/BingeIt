@@ -40,11 +40,11 @@
     margin-bottom: 15px;
 }
 
-.login-form h1{
+.login-form h3{
     text-align: center;
     letter-spacing: 0.9px;
     color:rgba(249, 211, 180, 1);
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .login-form div {
@@ -79,3 +79,19 @@
 .login-form button:hover {
     background-color: gray;
 }
+
+.sign-up-message{
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(249, 211, 180, 1);
+    text-align: center;
+    margin-top: 5px;
+}
+
+  
+  .hover-anchor:hover {
+    color: #a1a1a1;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

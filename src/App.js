@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './component/Home';
-import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MoviePage from './component/MoviePage';
 import Login from './component/login-signup/Login';
 import Register from './component/login-signup/Register';
@@ -10,6 +10,7 @@ import axios from 'axios'
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const apiKey= process.env.REACT_APP_OMDB_API_KEY
 
   const searchMovies = async (title) => {
     const API_URL = 'https://www.omdbapi.com';
@@ -17,7 +18,7 @@ function App() {
     try {
       const response = await axios.get(API_URL, {
         params: {
-          apikey: '849b2afd',
+          apikey: apiKey,
           s: title,
         },
       });
@@ -55,8 +56,8 @@ function App() {
         <Routes>
           <Route element={<ProtectedRoute />}>
 
-            <Route path='/home' element={<Home movies={movies} searchMovies={searchMovies} />} />
-            <Route path="/movies/:imdbID" element={<MoviePage searchMovies={searchMovies} />} />
+            <Route path='/home' element={<Home movies={movies} searchMovies={searchMovies} apiKey={apiKey}/>} />
+            <Route path="/movies/:imdbID" element={<MoviePage searchMovies={searchMovies} apiKey={apiKey}/>} />
           </Route>
         </Routes>
       </BrowserRouter>

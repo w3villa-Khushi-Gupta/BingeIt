@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/stylesheets/Header.css';
-import '../assets/images/958250-200.png'
 
 function Header({ searchMovies }) {
     const [searchTerm, setSearchTerm] = useState('');
@@ -18,7 +17,7 @@ function Header({ searchMovies }) {
         // Clear the user's authentication token from local storage
         localStorage.removeItem('token');
         // Redirect the user to the login page
-        navigate('/login');
+        navigate('/');
     };
 
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navigate, Outlet, useNavigate } from 'react-router-dom';
-import Temp from './Temp';
 
 function ProtectedRoute() {
     const token = localStorage.getItem('token');
